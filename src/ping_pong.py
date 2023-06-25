@@ -9,6 +9,9 @@ image_folder = "extra/images"
 ball_image_path = os.path.join(image_folder, "ball.png")
 ball_image = pygame.image.load(ball_image_path).convert_alpha()
 
+background_image_path = os.path.join(image_folder, "background.png")
+background_image = pygame.image.load(background_image_path).convert_alpha()
+
 
 class Ball(pygame.sprite.Sprite):
     def __init__(self, x, y):
@@ -38,7 +41,7 @@ while game_is_active:
         if event.type == pygame.QUIT:
             game_is_active = False
 
-    screen.fill((255, 255, 255))
+    screen.blit(background_image, (0, 0))
 
     all_sprites.update()
     all_sprites.draw(screen)
