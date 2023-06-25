@@ -27,7 +27,10 @@ class Ball(pygame.sprite.Sprite):
 
 all_sprites = pygame.sprite.Group()
 
-ball = Ball(295, 215)
+ball_position_one = 295
+ball_position_two = 215
+
+ball = Ball(ball_position_one, ball_position_two)
 all_sprites.add(ball)
 
 
