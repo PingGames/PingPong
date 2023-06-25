@@ -6,8 +6,8 @@ screen = pygame.display.set_mode((640, 480))
 pygame.display.set_caption("PingPong")
 
 image_folder = "extra/images"
-image_path = os.path.join(image_folder, "ball.png")
-ball_image = pygame.image.load(image_path).convert_alpha()
+ball_image_path = os.path.join(image_folder, "ball.png")
+ball_image = pygame.image.load(ball_image_path).convert_alpha()
 
 
 class Ball(pygame.sprite.Sprite):
