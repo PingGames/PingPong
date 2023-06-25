@@ -20,9 +20,12 @@ class Ball(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+        self.speed_x = 2
+        self.speed_y = 2
 
     def update(self):
-        pass
+        self.rect.x += self.speed_x
+        self.rect.y += self.speed_y
 
 
 all_sprites = pygame.sprite.Group()
@@ -32,7 +35,6 @@ ball_position_two = 215
 
 ball = Ball(ball_position_one, ball_position_two)
 all_sprites.add(ball)
-
 
 game_is_active = True
 
